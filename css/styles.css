@@ -522,6 +522,7 @@ img {
 
 .but-close {
   position: absolute;
+  padding: 0;
   top: 24px;
   right: 24px;
   width: 24px;
@@ -534,7 +535,7 @@ img {
   align-items: center;
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .but-close-icon {
@@ -544,7 +545,7 @@ img {
 .but-close:hover,
 .but-close:focus {
   background-color: #404bbf;
-  border-color: #404bbf;
+  border: none;
 }
 
 .but-close:hover .but-close-icon,
@@ -566,7 +567,7 @@ img {
   margin-bottom: 8px;
 }
 
-.form-field:last-child {
+.form-field-comment {
   margin-bottom: 16px;
 }
 
@@ -574,10 +575,10 @@ img {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+  line-height: 1.17;
 }
 
 .input-wrapper {
@@ -614,6 +615,10 @@ img {
 .form-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   width: 100%;
   height: 120px;
   padding: 8px 16px;
@@ -642,7 +647,7 @@ img {
 .label-checkbox {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
@@ -657,25 +662,26 @@ img {
   height: 16px;
   margin-right: 8px;
   flex-shrink: 0;
+  fill: transparent;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-checkbox-icon {
   display: block;
   opacity: 0;
-  fill: #f4f4fd;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-input:checked + .label-checkbox > .custom-checkbox {
   background-color: #404bbf;
-  border-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 
 .check-input:checked + .label-checkbox > .custom-checkbox .custom-checkbox-icon {
@@ -710,8 +716,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .submit-btn:hover,
